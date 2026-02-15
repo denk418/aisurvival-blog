@@ -1,0 +1,40 @@
+baseURL = 'https://aisurvival.blog'
+languageCode = 'en-us'
+title = 'AI Survival Blog'
+theme = 'PaperMod'
+
+[params]
+  env = "production"
+  title = "AI Survival Blog"
+  description = "Survive and thrive in the AI era with investment strategies and market insights"
+  author = "Den Kim"
+  
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowWordCount = true
+  
+  [params.homeInfoParams]
+    Title = "Welcome to AI Survival Blog 🧠"
+    Content = "Navigate the AI revolution with smart investment strategies and market insights."
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 10
+  [[menu.main]]
+    identifier = "categories"
+    name = "Categories"
+    url = "/categories/"
+    weight = 20
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 30
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]

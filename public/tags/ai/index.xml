@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>AI on AI Survival Blog</title>
+    <link>http://localhost:1313/tags/ai/</link>
+    <description>Recent content in AI on AI Survival Blog</description>
+    <generator>Hugo -- 0.155.3</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 15 Feb 2026 17:30:00 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI가 바이오테크를 죽이고 있다: 앱셀레라 사태가 말해주는 진실 (Part 1)</title>
+      <link>http://localhost:1313/posts/ai-kills-biotech-axcellera-part1/</link>
+      <pubDate>Sun, 15 Feb 2026 17:30:00 +0900</pubDate>
+      <guid>http://localhost:1313/posts/ai-kills-biotech-axcellera-part1/</guid>
+      <description>2026년 앱셀레라 44.6% 폭락 사태로 본 AI 바이오테크 업계의 구조적 변화와 생존 전략 분석</description>
+    </item>
+  </channel>
+</rss>
