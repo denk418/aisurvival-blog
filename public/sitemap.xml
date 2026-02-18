@@ -2,10 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://aisurvival.blog/tags/ai/</loc>
-    <lastmod>2026-02-15T17:30:00+09:00</lastmod>
+    <loc>https://aisurvival.blog/about/</loc>
+    <lastmod>2026-02-18T11:30:00+09:00</lastmod>
   </url><url>
     <loc>https://aisurvival.blog/</loc>
+    <lastmod>2026-02-18T11:30:00+09:00</lastmod>
+  </url><url>
+    <loc>https://aisurvival.blog/tags/ai/</loc>
     <lastmod>2026-02-15T17:30:00+09:00</lastmod>
   </url><url>
     <loc>https://aisurvival.blog/tags/analysis/</loc>
