@@ -25,7 +25,6 @@ The AI revolution is creating both massive opportunities and existential risks f
 
 ### Connect
 
-- **LinkedIn**: [Den Kim](https://linkedin.com/in/denkim)
 - **Email**: hello@aisurvival.blog
 
 ---
