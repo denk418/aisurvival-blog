@@ -1,6 +1,7 @@
 ---
 title: "About"
 date: 2026-02-18T11:30:00+09:00
+lastmod: 2026-02-18T13:15:00+09:00
 draft: false
 ---
 
