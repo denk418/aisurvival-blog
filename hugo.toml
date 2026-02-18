@@ -3,21 +3,70 @@ languageCode = 'en-us'
 title = 'AI Survival Blog'
 theme = 'PaperMod'
 
+# Performance optimization
+enableRobotsTXT = true
+enableEmoji = true
+enableGitInfo = true
+
+# Pagination
+[pagination]
+  pagerSize = 10
+  path = 'page'
+
+# RSS Feed
+rssLimit = 20
+
+# Minify output
+[minify]
+  disableCSS = false
+  disableHTML = false
+  disableJS = false
+  disableSVG = false
+  disableXML = false
+  minifyOutput = true
+
 [params]
   env = "production"
   title = "AI Survival Blog"
   description = "Survive and thrive in the AI era with investment strategies and market insights"
   author = "Den Kim"
+  keywords = ["AI", "investment", "tech stocks", "portfolio strategy", "artificial intelligence", "semiconductors", "market analysis"]
   
   ShowReadingTime = true
   ShowShareButtons = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  enableSearch = true
+  
+  # Theme settings
+  defaultTheme = "auto"
+  disableThemeToggle = false
   
   [params.homeInfoParams]
     Title = "Welcome to AI Survival Blog 🧠"
     Content = "Navigate the AI revolution with smart investment strategies and market insights."
+  
+  # SEO & Social Media
+  [params.assets]
+    favicon = "/favicon.ico"
+    favicon16x16 = "/favicon-16x16.png"
+    favicon32x32 = "/favicon-32x32.png"
+    apple_touch_icon = "/apple-touch-icon.png"
+  
+  [params.opengraph.twitter]
+    card = "summary_large_image"
+  
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1_000
+    threshold = 0.4
+    minMatchCharLength = 0
+    keys = ["title", "permalink", "summary", "content"]
 
 [menu]
   [[menu.main]]
