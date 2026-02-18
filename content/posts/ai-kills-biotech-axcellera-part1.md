@@ -1,6 +1,7 @@
 ---
 title: "How AI is Killing Biotech: The AbCellera Collapse Reveals a Brutal Truth (Part 1)"
 date: 2026-02-15T17:30:00+09:00
+draft: true
 tags: ["AI", "Biotech", "Investment", "Analysis", "Tech-Disruption"]
 categories: ["Investment Strategy", "Sector Analysis"]
 author: "Den Kim"
@@ -11,7 +12,6 @@ cover:
     caption: "The AI revolution is fundamentally reshaping biotech economics"
 ShowToc: true
 TocOpen: false
-draft: false
 ---
 
 ## The Biotech Bloodbath of 2026 🩸
