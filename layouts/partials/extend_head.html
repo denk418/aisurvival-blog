@@ -16,14 +16,19 @@
     font-family: 'JetBrains Mono', 'Fira Code', monospace;
   }
   
-  /* Title Styling */
-  .home-info .entry-hint-parent {
-    margin-bottom: 2rem;
-  }
-  
   /* Category Icons Enhancement */
   .menu.main-menu a::before {
     margin-right: 0.5rem;
+  }
+
+  /* Hide duplicate title on home */
+  .home-info .entry-header h1 {
+    display: none;
+  }
+  
+  .home-info .entry-content {
+    font-size: 1.125rem;
+    opacity: 0.9;
   }
 
   /* Hamburger Menu Button - Mobile */
@@ -34,6 +39,7 @@
     cursor: pointer;
     padding: 8px;
     z-index: 1001;
+    margin-right: 12px;
   }
   
   .mobile-menu-btn span {
@@ -139,6 +145,14 @@ document.addEventListener('DOMContentLoaded', function() {
   hamburgerBtn.innerHTML = '<span></span><span></span><span></span>';
   hamburgerBtn.setAttribute('aria-label', 'Menu');
   
+  // Insert before logo (left side of title)
+  const logo = header.querySelector('.logo');
+  if (logo) {
+    logo.parentNode.insertBefore(hamburgerBtn, logo);
+  } else {
+    header.appendChild(hamburgerBtn);
+  }
+  
   // Create overlay
   const overlay = document.createElement('div');
   overlay.className = 'mobile-menu-overlay';
@@ -154,7 +168,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   // Insert elements
-  header.appendChild(hamburgerBtn);
   document.body.appendChild(overlay);
   document.body.appendChild(menuPanel);
   
