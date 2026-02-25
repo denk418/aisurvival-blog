@@ -2,6 +2,7 @@ baseURL = 'https://aisurvival.blog'
 languageCode = 'en-us'
 title = 'AI Survival Blog'
 theme = 'PaperMod'
+googleAnalytics = 'G-MJZGZ1H52C'
 
 # Performance optimization
 enableRobotsTXT = true
@@ -40,14 +41,30 @@ rssLimit = 20
   ShowRssButtonInSectionTermList = true
   UseHugoToc = true
   enableSearch = true
+  ShowHomeInfoOnMobile = true
+  ShowMenuButton = true
   
   # Theme settings
-  defaultTheme = "auto"
+  defaultTheme = "dark"
   disableThemeToggle = false
+  ShowThemeSwitch = true
+  
+  # Custom styling
+  hideFooter = false
+  hideEntryTags = false
+  hideSummary = false
+  showTableOfContents = true
+  showTaxonomies = true
+  
+  # SEO Enhancement
+  [params.seo]
+    enableOpenGraph = true
+    enableTwitterCards = true
+    enableSchema = true
   
   [params.homeInfoParams]
-    Title = "Welcome to AI Survival Blog 🧠"
-    Content = "Navigate the AI revolution with smart investment strategies and market insights."
+    Title = "AI Survival Blog"
+    Content = "Survive and thrive in the AI era through structural insights."
   
   # SEO & Social Media
   [params.assets]
@@ -56,8 +73,14 @@ rssLimit = 20
     favicon32x32 = "/favicon-32x32.png"
     apple_touch_icon = "/apple-touch-icon.png"
   
+  # Open Graph for social sharing
+  [params.opengraph]
+    enabled = true
+  
   [params.opengraph.twitter]
     card = "summary_large_image"
+    site = ""
+    creator = ""
   
   [params.fuseOpts]
     isCaseSensitive = false
@@ -76,19 +99,33 @@ rssLimit = 20
     weight = 5
   [[menu.main]]
     identifier = "posts"
-    name = "Posts"
+    name = "All Posts"
     url = "/posts/"
     weight = 10
   [[menu.main]]
-    identifier = "categories"
-    name = "Categories"
-    url = "/categories/"
+    identifier = "investment-insights"
+    name = "📊 Investment Insights"
+    url = "/categories/investment-insights/"
     weight = 20
   [[menu.main]]
-    identifier = "tags"
-    name = "Tags"
-    url = "/tags/"
+    identifier = "news-curation"
+    name = "📰 News Curation"
+    url = "/categories/news-curation/"
     weight = 30
+  [[menu.main]]
+    identifier = "ai-workflows-menu"
+    name = "🛠 AI in Workspace"
+    url = "/categories/ai-workflows/"
+    weight = 40
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+
+# Allow raw HTML in markdown (for details/summary toggle)
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+# Suppress warnings
+ignoreLogs = ['warning-goldmark-raw-html']

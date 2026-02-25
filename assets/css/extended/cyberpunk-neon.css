@@ -1,0 +1,206 @@
+/* ==========================================================================
+   AI Survival Blog - Cyberpunk Neon Theme
+   ========================================================================== */
+
+/* CSS Variables */
+:root {
+  --bg: #0a0a0f;
+  --bg-secondary: #12121a;
+  --text: #e4e4e7;
+  --text-muted: #71717a;
+  --accent: #00ffc8;
+  --border: #27272a;
+  --card: #16161e;
+  
+  --light-bg: #fafafa;
+  --light-bg-secondary: #ffffff;
+  --light-text: #18181b;
+  --light-accent: #059669;
+}
+
+/* Base */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* Header */
+.header {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-title,
+.logo {
+  color: var(--accent) !important;
+  font-weight: 700;
+}
+
+/* Links */
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  text-shadow: 0 0 10px var(--accent);
+}
+
+/* Hero Section */
+.first-entry {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin: 1rem 0;
+}
+
+.first-entry .entry-header h1 {
+  color: var(--accent);
+}
+
+.first-entry .entry-content p {
+  color: var(--text-muted);
+}
+
+/* Post Cards */
+.post-entry {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.post-entry:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+
+.post-entry .entry-title {
+  color: var(--text);
+}
+
+.post-entry:hover .entry-title {
+  color: var(--accent);
+}
+
+/* Code */
+pre, code {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+:not(pre) > code {
+  color: var(--accent);
+}
+
+/* Blockquote */
+blockquote {
+  border-left: 3px solid var(--accent);
+  background: var(--bg-secondary);
+  border-radius: 0 8px 8px 0;
+}
+
+/* Tables */
+th {
+  background: var(--bg-secondary);
+  color: var(--accent);
+}
+
+tr:nth-child(even) {
+  background: var(--bg-secondary);
+}
+
+/* Tags */
+.tags a {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+}
+
+.tags a:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--border);
+  background: var(--bg-secondary);
+}
+
+/* Selection */
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: var(--light-bg);
+    color: var(--light-text);
+  }
+  
+  .site-title,
+  .logo {
+    color: var(--light-accent) !important;
+  }
+  
+  .post-entry {
+    background: var(--light-bg-secondary);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .header {
+    padding: 0.75rem 1rem;
+  }
+  
+  .site-title,
+  .logo {
+    font-size: 1.125rem;
+  }
+  
+  .first-entry {
+    padding: 1.25rem 1rem;
+    margin: 0.5rem 0;
+  }
+  
+  .first-entry .entry-header h1 {
+    font-size: 1.375rem;
+  }
+  
+  .first-entry .entry-content p {
+    font-size: 0.9375rem;
+  }
+  
+  .post-entry {
+    padding: 1rem;
+    margin: 0.5rem 0;
+  }
+  
+  .post-entry .entry-title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .first-entry .entry-header h1 {
+    font-size: 1.25rem;
+  }
+}
