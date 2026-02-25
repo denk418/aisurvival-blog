@@ -21,14 +21,43 @@
     margin-right: 0.5rem;
   }
 
-  /* Home info - show only description */
+  /* Home info - minimal description with typing effect */
   .first-entry.home-info .entry-header {
     display: none;
   }
   
+  .first-entry.home-info {
+    padding: 1.5rem 1rem;
+    margin: 0.5rem 0;
+    min-height: auto;
+    border: none;
+    background: transparent;
+  }
+  
   .first-entry.home-info .entry-content {
-    font-size: 1.1rem;
-    font-weight: 500;
+    font-size: 0.95rem;
+    opacity: 0.9;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .typing-text {
+    display: inline;
+  }
+  
+  .typing-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background: var(--accent, #00ffc8);
+    margin-left: 2px;
+    animation: blink 1s infinite;
+    vertical-align: text-bottom;
+  }
+  
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
   }
 
   /* Header layout for mobile */
@@ -207,6 +236,26 @@ document.addEventListener('DOMContentLoaded', function() {
       toggleMenu();
     });
   });
+  
+  // Typing effect for home description
+  const homeContent = document.querySelector('.first-entry.home-info .entry-content');
+  if (homeContent) {
+    const text = homeContent.textContent.trim();
+    homeContent.innerHTML = '<span class="typing-text"></span><span class="typing-cursor"></span>';
+    const typingText = homeContent.querySelector('.typing-text');
+    
+    let i = 0;
+    function typeWriter() {
+      if (i < text.length) {
+        typingText.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 30 + Math.random() * 30);
+      }
+    }
+    
+    // Start typing after short delay
+    setTimeout(typeWriter, 500);
+  }
 });
 </script>
 
