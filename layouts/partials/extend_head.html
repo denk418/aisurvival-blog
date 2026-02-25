@@ -121,8 +121,8 @@
       display: block;
     }
     
-    .header .menu.main-menu {
-      display: none;
+    #menu {
+      display: none !important;
     }
   }
 </style>
@@ -148,9 +148,9 @@ document.addEventListener('DOMContentLoaded', function() {
   menuPanel.className = 'mobile-menu-panel';
   
   // Clone main menu
-  const mainMenu = document.querySelector('.menu.main-menu');
+  const mainMenu = document.querySelector('#menu');
   if (mainMenu) {
-    menuPanel.innerHTML = mainMenu.outerHTML;
+    menuPanel.innerHTML = '<ul class="menu">' + mainMenu.innerHTML + '</ul>';
   }
   
   // Insert elements
