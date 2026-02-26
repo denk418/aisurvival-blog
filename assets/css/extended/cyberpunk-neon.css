@@ -63,23 +63,61 @@ a:hover {
 
 /* Post Cards */
 .post-entry {
-  background: var(--card);
-  border: 1px solid var(--border);
+  background: var(--card) !important;
+  border: 1px solid var(--border) !important;
   border-radius: 12px;
-  transition: transform 0.2s, border-color 0.2s;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+  overflow: hidden;
 }
 
 .post-entry:hover {
-  transform: translateY(-2px);
-  border-color: var(--accent);
+  transform: translateY(-4px);
+  border-color: var(--accent) !important;
+  box-shadow: 0 8px 24px rgba(0, 255, 200, 0.1);
+}
+
+.post-entry .entry-header {
+  padding: 1rem 1rem 0.5rem;
 }
 
 .post-entry .entry-title {
-  color: var(--text);
+  color: var(--text) !important;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
 }
 
 .post-entry:hover .entry-title {
-  color: var(--accent);
+  color: var(--accent) !important;
+}
+
+.post-entry .entry-content {
+  padding: 0 1rem 1rem;
+  color: var(--text-muted) !important;
+}
+
+.post-entry .entry-footer {
+  padding: 0.75rem 1rem;
+  border-top: 1px solid var(--border);
+  background: var(--bg-secondary);
+  color: var(--text-muted) !important;
+}
+
+.post-entry .entry-cover {
+  margin: 0;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+}
+
+.post-entry .entry-cover img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.post-entry:hover .entry-cover img {
+  transform: scale(1.02);
 }
 
 /* Code */
@@ -150,18 +188,38 @@ tr:nth-child(even) {
 
 /* Light Mode */
 @media (prefers-color-scheme: light) {
-  body {
-    background-color: var(--light-bg);
-    color: var(--light-text);
+  :root:not([data-theme="dark"]) {
+    --bg: #fafafa;
+    --bg-secondary: #ffffff;
+    --text: #18181b;
+    --text-muted: #71717a;
+    --accent: #059669;
+    --border: #e4e4e7;
+    --card: #ffffff;
   }
-  
-  .site-title,
-  .logo {
-    color: var(--light-accent) !important;
-  }
-  
-  .post-entry {
-    background: var(--light-bg-secondary);
+}
+
+/* Explicit Dark Mode */
+[data-theme="dark"] {
+  --bg: #0a0a0f;
+  --bg-secondary: #12121a;
+  --text: #e4e4e7;
+  --text-muted: #71717a;
+  --accent: #00ffc8;
+  --border: #27272a;
+  --card: #16161e;
+}
+
+/* Fallback for dark preference without explicit theme */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0a0a0f;
+    --bg-secondary: #12121a;
+    --text: #e4e4e7;
+    --text-muted: #71717a;
+    --accent: #00ffc8;
+    --border: #27272a;
+    --card: #16161e;
   }
 }
 
