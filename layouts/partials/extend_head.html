@@ -180,7 +180,6 @@
 {{- /* Mobile Menu Script */ -}}
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Create hamburger button
   const header = document.querySelector('.header');
   if (!header) return;
   
@@ -189,7 +188,6 @@ document.addEventListener('DOMContentLoaded', function() {
   hamburgerBtn.innerHTML = '<span></span><span></span><span></span>';
   hamburgerBtn.setAttribute('aria-label', 'Menu');
   
-  // Insert inside logo div, before the link (mobile only)
   const logoDiv = header.querySelector('.logo');
   const logoLink = logoDiv ? logoDiv.querySelector('a') : null;
   
@@ -201,25 +199,20 @@ document.addEventListener('DOMContentLoaded', function() {
     header.insertBefore(hamburgerBtn, header.firstChild);
   }
   
-  // Create overlay
   const overlay = document.createElement('div');
   overlay.className = 'mobile-menu-overlay';
   
-  // Create menu panel
   const menuPanel = document.createElement('div');
   menuPanel.className = 'mobile-menu-panel';
   
-  // Clone main menu
   const mainMenu = document.querySelector('#menu');
   if (mainMenu) {
     menuPanel.innerHTML = '<ul class="menu">' + mainMenu.innerHTML + '</ul>';
   }
   
-  // Insert elements
   document.body.appendChild(overlay);
   document.body.appendChild(menuPanel);
   
-  // Toggle menu
   function toggleMenu() {
     hamburgerBtn.classList.toggle('active');
     overlay.classList.toggle('active');
@@ -230,14 +223,12 @@ document.addEventListener('DOMContentLoaded', function() {
   hamburgerBtn.addEventListener('click', toggleMenu);
   overlay.addEventListener('click', toggleMenu);
   
-  // Close on link click
   menuPanel.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
       toggleMenu();
     });
   });
   
-  // Typing effect for home description
   const homeContent = document.querySelector('.first-entry.home-info .entry-content');
   if (homeContent) {
     const text = homeContent.textContent.trim();
@@ -253,9 +244,122 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
     
-    // Start typing after short delay
     setTimeout(typeWriter, 500);
   }
+});
+</script>
+
+{{- /* GA4 Event Tracking */ -}}
+<script>
+// Scroll Depth Tracking
+(function() {
+  let scrollTracked = {25: false, 50: false, 75: false, 90: false};
+  let scrollTimeout;
+  
+  window.addEventListener('scroll', function() {
+    if (scrollTimeout) return;
+    scrollTimeout = setTimeout(function() {
+      scrollTimeout = null;
+      let scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+      for (let threshold in scrollTracked) {
+        if (!scrollTracked[threshold] && scrollPercent >= parseInt(threshold)) {
+          if (typeof gtag === 'function') {
+            gtag('event', 'scroll_depth', {
+              'event_category': 'Engagement',
+              'event_label': threshold + '%',
+              'value': parseInt(threshold)
+            });
+          }
+          scrollTracked[threshold] = true;
+        }
+      }
+    }, 100);
+  });
+})();
+
+// Reading Time Tracking
+(function() {
+  let readingStartTime = Date.now();
+  let articleTitle = document.querySelector('h1')?.textContent || 'Unknown';
+  
+  window.addEventListener('beforeunload', function() {
+    let readingTime = Math.round((Date.now() - readingStartTime) / 1000);
+    if (typeof gtag === 'function' && readingTime > 5) {
+      gtag('event', 'reading_time', {
+        'event_category': 'Engagement',
+        'event_label': articleTitle,
+        'value': readingTime
+      });
+    }
+  });
+})();
+
+// Outbound Link Tracking
+document.addEventListener('click', function(e) {
+  let link = e.target.closest('a');
+  if (!link) return;
+  
+  let href = link.getAttribute('href');
+  if (!href) return;
+  
+  if (href.startsWith('http') && !href.includes(window.location.hostname)) {
+    if (typeof gtag === 'function') {
+      gtag('event', 'outbound_click', {
+        'event_category': 'Outbound',
+        'event_label': href,
+        'transport_type': 'beacon'
+      });
+    }
+  }
+  
+  if (link.closest('.share-buttons') || link.classList.contains('share')) {
+    let platform = link.textContent.trim() || 'unknown';
+    if (typeof gtag === 'function') {
+      gtag('event', 'share', {
+        'event_category': 'Social',
+        'event_label': platform,
+        'method': platform
+      });
+    }
+  }
+});
+
+// Search Tracking
+document.addEventListener('DOMContentLoaded', function() {
+  let searchInput = document.querySelector('#searchInput, input[type="search"], .search-input');
+  if (searchInput) {
+    let searchTimeout;
+    searchInput.addEventListener('input', function(e) {
+      clearTimeout(searchTimeout);
+      searchTimeout = setTimeout(function() {
+        let query = e.target.value.trim();
+        if (query.length >= 3 && typeof gtag === 'function') {
+          gtag('event', 'search', {
+            'event_category': 'Site Search',
+            'event_label': query
+          });
+        }
+      }, 1000);
+    });
+  }
+});
+
+// Article Engagement - Time on Page
+document.addEventListener('DOMContentLoaded', function() {
+  let article = document.querySelector('article, .post-single');
+  if (!article) return;
+  
+  let timeOnPage = 0;
+  setInterval(function() {
+    timeOnPage += 30;
+    if (timeOnPage <= 180 && typeof gtag === 'function') {
+      gtag('event', 'time_on_page', {
+        'event_category': 'Engagement',
+        'event_label': timeOnPage + 's',
+        'value': timeOnPage
+      });
+    }
+  }, 30000);
 });
 </script>
 

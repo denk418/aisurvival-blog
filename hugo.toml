@@ -1,6 +1,6 @@
 baseURL = 'https://aisurvival.blog'
 languageCode = 'en-us'
-title = 'AI Survival Blog'
+title = 'AI Survival Blog - Investment Strategies for the AI Era'
 theme = 'PaperMod'
 googleAnalytics = 'G-MJZGZ1H52C'
 
@@ -29,9 +29,9 @@ rssLimit = 20
 [params]
   env = "production"
   title = "AI Survival Blog"
-  description = "Survive and thrive in the AI era with investment strategies and market insights"
+  description = "Data-driven investment insights for the AI era. Vertical AI startups, energy infrastructure, semiconductors, and structural market shifts. For 20-40s tech workers and value investors."
   author = "Den Kim"
-  keywords = ["AI", "investment", "tech stocks", "portfolio strategy", "artificial intelligence", "semiconductors", "market analysis"]
+  keywords = ["AI investment", "vertical AI", "AI stocks", "semiconductors", "data center stocks", "energy stocks", "AI startups", "investment strategy", "market analysis", "artificial intelligence", "tech investing", "AI infrastructure"]
   
   ShowReadingTime = true
   ShowShareButtons = true
@@ -79,8 +79,13 @@ rssLimit = 20
   
   [params.opengraph.twitter]
     card = "summary_large_image"
-    site = ""
-    creator = ""
+    site = "@denk_418"
+    creator = "@denk_418"
+  
+  # Social links
+  [[params.socialIcons]]
+    name = "twitter"
+    url = "https://x.com/denk_418"
   
   [params.fuseOpts]
     isCaseSensitive = false
