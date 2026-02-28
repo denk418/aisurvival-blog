@@ -417,3 +417,34 @@ document.addEventListener('DOMContentLoaded', function() {
   logoSwitches.insertBefore(xLink, themeToggle);
 });
 </script>
+
+{{- /* Mobile Title Spacing */ -}}
+<style>
+@media (max-width: 768px) {
+  .first-entry.home-info {
+    padding: 0.4rem 0.8rem !important;
+    margin: 0.2rem 0 !important;
+  }
+  
+  .first-entry.home-info .entry-content {
+    font-size: 0.85rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  .post-entry {
+    padding: 0.75rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .post-entry .entry-title {
+    font-size: 1rem !important;
+    margin-bottom: 0.2rem !important;
+    line-height: 1.25 !important;
+  }
+  
+  .post-entry .entry-content {
+    font-size: 0.85rem !important;
+    line-height: 1.3 !important;
+  }
+}
+</style>

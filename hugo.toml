@@ -82,11 +82,6 @@ rssLimit = 20
     site = "@denk_418"
     creator = "@denk_418"
   
-  # Social links
-  [[params.socialIcons]]
-    name = "twitter"
-    url = "https://x.com/denk_418"
-  
   [params.fuseOpts]
     isCaseSensitive = false
     shouldSort = true
