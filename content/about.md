@@ -1,7 +1,7 @@
 ---
 title: "About"
 date: 2026-02-18T11:30:00+09:00
-lastmod: 2026-03-01T01:14:00+09:00
+lastmod: 2026-03-01T01:28:00+09:00
 draft: false
 ---
 
@@ -9,9 +9,9 @@ draft: false
 
 **Head of Product at a proptech startup. Seoul-based.**
 
-I started my career as a private equity analyst, evaluating technology businesses and their long-term value creation potential. That experience shaped how I think about structural shifts—the kind that create new winners and losers over decades, not quarters.
+I started my career as a private equity analyst, conducting research, business valuation, and financial modeling across energy, education, and lifestyle sectors. That experience taught me how to identify structural shifts that create long-term value—and how to separate signal from noise in rapidly changing markets.
 
-I later joined Samsung Electronics' semiconductor strategy team, where I led product strategy for multiple memory and foundry product lines. Working inside one of the world's largest semiconductor companies gave me a front-row seat to how AI, cloud, and edge computing reshape hardware demand—and which companies capture that value.
+I later joined Samsung Electronics' System LSI division, where I led product management for IoT and Digital TV SoCs. Working at the intersection of semiconductors and consumer electronics gave me insight into how AI, edge computing, and connectivity reshape hardware ecosystems—and which companies capture value at each layer.
 
 Today, I lead product at a Seoul-based living platform, building AI-powered experiences for residents and operations teams. I see daily how AI transforms real estate operations, tenant experiences, and the economics of property management.
 
@@ -35,8 +35,8 @@ The AI era is creating both massive opportunities and existential risks. I creat
 
 | Role | Focus |
 |------|-------|
-| Private Equity Analyst | Technology investment analysis |
-| Samsung Electronics | Semiconductor product strategy |
+| Private Equity Analyst | Cross-sector research, business valuation |
+| Samsung System LSI | IoT & Digital TV SoC product management |
 | Current | Head of Product, Proptech |
 
 ### Connect
