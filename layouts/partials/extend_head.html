@@ -448,3 +448,12 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 }
 </style>
+
+{{- /* Open Graph & Twitter Card Images */ -}}
+{{- if .Params.image }}
+<meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.image | absURL }}" />
+<meta name="twitter:image" content="{{ .Site.BaseURL }}{{ .Params.image | absURL }}" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@denk_418" />
+<meta name="twitter:creator" content="@denk_418" />
+{{- end }}
