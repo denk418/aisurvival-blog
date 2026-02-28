@@ -5,7 +5,8 @@ draft: false
 description: "Block's layoffs sparked 'AI is taking jobs' panic. But the reality is more nuanced: executives are using AI as cover for restructuring while experimenting with new operating models. History suggests competition, not mass unemployment, is what's coming."
 tags: ["AI", "White Collar", "Jobs", "Transformation", "AI Washing"]
 categories: ["Investment Insights"]
-image: "/images/ai-human-collab.png"
+cover:
+  image: "/images/ai-human-collab.png"
 ---
 
 ## The AI Panic Narrative

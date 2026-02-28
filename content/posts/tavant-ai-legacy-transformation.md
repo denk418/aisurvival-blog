@@ -5,7 +5,8 @@ draft: false
 description: "A deep dive into how Tavant's TOUCHLESS platform achieved 77% cost reduction and 4.5x productivity gains in mortgage operations—the lessons for any legacy industry facing AI transformation."
 tags: ["AI", "Agentic AI", "Mortgage", "Legacy Systems", "Digital Transformation", "Proptech"]
 categories: ["Investment Insights"]
-image: "/images/tavant-mortgage-ai.png"
+cover:
+  image: "/images/tavant-mortgage-ai.png"
 ---
 
 ## The Problem: Mortgage's $10,000 Paper Problem
