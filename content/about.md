@@ -1,7 +1,7 @@
 ---
 title: "About"
 date: 2026-02-18T11:30:00+09:00
-lastmod: 2026-02-18T13:15:00+09:00
+lastmod: 2026-03-01T01:14:00+09:00
 draft: false
 ---
 
@@ -9,23 +9,40 @@ draft: false
 
 **Head of Product at a proptech startup. Seoul-based.**
 
-I've been investing in tech businesses for over 10 years, focusing on AI, semiconductors, and emerging technologies that reshape industries.
+I started my career as a private equity analyst, evaluating technology businesses and their long-term value creation potential. That experience shaped how I think about structural shifts—the kind that create new winners and losers over decades, not quarters.
+
+I later joined Samsung Electronics' semiconductor strategy team, where I led product strategy for multiple memory and foundry product lines. Working inside one of the world's largest semiconductor companies gave me a front-row seat to how AI, cloud, and edge computing reshape hardware demand—and which companies capture that value.
+
+Today, I lead product at a Seoul-based living platform, building AI-powered experiences for residents and operations teams. I see daily how AI transforms real estate operations, tenant experiences, and the economics of property management.
 
 ### Why This Blog?
 
-The AI revolution is creating both massive opportunities and existential risks for investors. I created AI Survival to help mid-level tech investors navigate this transformation with data-driven insights and practical strategies.
+The AI era is creating both massive opportunities and existential risks. I created AI Survival to help investors and tech professionals navigate this transformation with:
+
+- **Structural analysis**—not surface-level news
+- **Data-driven insights**—backed by numbers, not narratives
+- **Practical frameworks**—you can apply immediately
 
 ### What You'll Find Here
 
-**Investment Insights**: Capturing lifestyle shifts driven by the AI era—from smarter living solutions to evolving consumer behaviors—and translating them into actionable investment strategies.
+**Investment Insights**: Deep dives into AI infrastructure, semiconductors, energy, and the structural shifts creating new investment opportunities.
 
-**AI in Professional Workflows**: Practical tips for integrating LLMs, agents, and automation into product management and operations.
+**AI in Professional Workflows**: Real applications of LLMs, agents, and automation in product management and operations.
 
-**Evolving Real Estate Landscape**: Trends shaping co-living, short-term rentals, and innovative living solutions.
+**Evolving Real Estate Landscape**: How AI, demographic shifts, and lifestyle changes reshape where and how we live.
+
+### Background at a Glance
+
+| Role | Focus |
+|------|-------|
+| Private Equity Analyst | Technology investment analysis |
+| Samsung Electronics | Semiconductor product strategy |
+| Current | Head of Product, Proptech |
 
 ### Connect
 
 - **Email**: hello@aisurvival.blog
+- **X**: [@denk_418](https://x.com/denk_418)
 
 ---
 
