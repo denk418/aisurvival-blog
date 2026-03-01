@@ -11,11 +11,53 @@
   --accent: #00ffc8;
   --border: #27272a;
   --card: #16161e;
-  
-  --light-bg: #fafafa;
-  --light-bg-secondary: #ffffff;
-  --light-text: #18181b;
-  --light-accent: #059669;
+}
+
+/* Explicit Light Mode */
+[data-theme="light"] {
+  --bg: #fafafa;
+  --bg-secondary: #ffffff;
+  --text: #18181b;
+  --text-muted: #71717a;
+  --accent: #059669;
+  --border: #e4e4e7;
+  --card: #ffffff;
+}
+
+/* Explicit Dark Mode */
+[data-theme="dark"] {
+  --bg: #0a0a0f;
+  --bg-secondary: #12121a;
+  --text: #e4e4e7;
+  --text-muted: #71717a;
+  --accent: #00ffc8;
+  --border: #27272a;
+  --card: #16161e;
+}
+
+/* System Preference Fallbacks */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #fafafa;
+    --bg-secondary: #ffffff;
+    --text: #18181b;
+    --text-muted: #71717a;
+    --accent: #059669;
+    --border: #e4e4e7;
+    --card: #ffffff;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0a0a0f;
+    --bg-secondary: #12121a;
+    --text: #e4e4e7;
+    --text-muted: #71717a;
+    --accent: #00ffc8;
+    --border: #27272a;
+    --card: #16161e;
+  }
 }
 
 /* Base */
@@ -184,43 +226,6 @@ tr:nth-child(even) {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent);
-}
-
-/* Light Mode */
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme="dark"]) {
-    --bg: #fafafa;
-    --bg-secondary: #ffffff;
-    --text: #18181b;
-    --text-muted: #71717a;
-    --accent: #059669;
-    --border: #e4e4e7;
-    --card: #ffffff;
-  }
-}
-
-/* Explicit Dark Mode */
-[data-theme="dark"] {
-  --bg: #0a0a0f;
-  --bg-secondary: #12121a;
-  --text: #e4e4e7;
-  --text-muted: #71717a;
-  --accent: #00ffc8;
-  --border: #27272a;
-  --card: #16161e;
-}
-
-/* Fallback for dark preference without explicit theme */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0a0a0f;
-    --bg-secondary: #12121a;
-    --text: #e4e4e7;
-    --text-muted: #71717a;
-    --accent: #00ffc8;
-    --border: #27272a;
-    --card: #16161e;
-  }
 }
 
 /* Mobile Responsive */
