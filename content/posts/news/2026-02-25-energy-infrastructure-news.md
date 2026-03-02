@@ -2,6 +2,8 @@
 title: "Energy & Infrastructure News - Week 8, 2026"
 date: 2026-02-24T19:30:00+09:00
 draft: false
+cover:
+  image: "/images/energy-infrastructure-news.png"
 tags: ["Energy", "Infrastructure", "Data Centers", "Renewable Energy", "News"]
 categories: ["News Curation"]
 author: "Den Kim"

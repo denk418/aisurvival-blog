@@ -2,6 +2,8 @@
 title: "Vertical AI Investment News - Week 9, 2026"
 date: 2026-02-26T23:30:00+09:00
 draft: false
+cover:
+  image: "/images/vertical-ai-news.png"
 tags: ["AI", "Investment", "Vertical AI", "Startups", "News"]
 categories: ["News Curation"]
 author: "Den Kim"

@@ -2,6 +2,8 @@
 title: "Global AI/Tech Investment News - Week 8, 2026"
 date: 2026-02-23T08:00:00+09:00
 draft: false
+cover:
+  image: "/images/global-ai-investment.png"
 tags: ["AI", "Investment", "News", "Weekly"]
 categories: ["News Curation"]
 author: "Den Kim"
