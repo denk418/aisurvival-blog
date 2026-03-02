@@ -488,3 +488,46 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 }
 </style>
+
+{{- /* Mobile Title Area Optimization */ -}}
+<style>
+@media (max-width: 768px) {
+  /* Reduce header height */
+  .header {
+    padding: 0.5rem 0.75rem !important;
+  }
+  
+  .site-title, .logo a {
+    font-size: 1rem !important;
+  }
+  
+  /* Minimize home description */
+  .first-entry.home-info {
+    display: none !important;
+  }
+  
+  /* Hide menu on mobile (use hamburger only) */
+  #menu {
+    display: none !important;
+  }
+  
+  /* Reduce breadcrumbs height */
+  .breadcrumbs {
+    font-size: 0.75rem !important;
+    padding: 0.25rem 0 !important;
+  }
+  
+  /* Compact post title */
+  .post-title {
+    font-size: 1.5rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  /* Compact post meta */
+  .post-meta {
+    font-size: 0.8rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+}
+</style>
