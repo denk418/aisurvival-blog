@@ -267,3 +267,28 @@ tr:nth-child(even) {
     font-size: 1.25rem;
   }
 }
+
+/* Show cover images on list/archive pages */
+.post-entry .entry-cover {
+  display: block !important;
+  margin: 0 0 1rem 0;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+}
+
+.post-entry .entry-cover img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.post-entry:hover .entry-cover img {
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .post-entry .entry-cover img {
+    height: 150px;
+  }
+}
