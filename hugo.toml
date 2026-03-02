@@ -129,3 +129,18 @@ rssLimit = 20
 
 # Suppress warnings
 ignoreLogs = ['warning-goldmark-raw-html']
+
+# Related Posts
+[related]
+  includeNewer = true
+  threshold = 30
+  toLower = true
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+  [[related.indices]]
+    name = "categories"
+    weight = 80
+  [[related.indices]]
+    name = "date"
+    weight = 10

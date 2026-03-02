@@ -1,78 +1,88 @@
-{{- /* Related Posts Section */ -}}
+{{- /* Simple Related Posts */ -}}
 {{- if .IsPage }}
-{{- $related := .Site.RegularPages.Related . | first 3 }}
-{{- with $related }}
+{{- $currentPage := . }}
+{{- $category := "Investment Insights" }}
+{{- range .Params.categories }}
+{{- $category = . }}
+{{- end }}
+{{- $allPages := where .Site.RegularPages "Section" "posts" }}
 <section class="related-posts">
   <h3>📌 Related Posts</h3>
   <div class="related-grid">
-    {{- range . }}
+    {{- range first 3 $allPages }}
+    {{- if ne .Permalink $currentPage.Permalink }}
     <a href="{{ .Permalink }}" class="related-card">
-      <div class="related-title">{{ .Title }}</div>
-      <div class="related-meta">
-        <span>{{ .Date.Format "Jan 2, 2006" }}</span>
-        <span>{{ .ReadingTime }} min read</span>
+      {{- if .Params.cover.image }}
+      <img src="{{ .Params.cover.image }}" alt="" class="related-image">
+      {{- end }}
+      <div>
+        <div class="related-title">{{ .Title }}</div>
+        <div class="related-meta">
+          <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+          <span>{{ .ReadingTime }} min</span>
+        </div>
       </div>
     </a>
+    {{- end }}
     {{- end }}
   </div>
 </section>
 
 <style>
 .related-posts {
-  margin: 2rem 0;
+  margin: 2rem 0 1rem;
   padding: 1.5rem;
-  border-top: 1px solid var(--border, #27272a);
+  background: var(--bg-secondary, #12121a);
+  border: 1px solid var(--border, #27272a);
+  border-radius: 12px;
 }
-
 .related-posts h3 {
   margin-bottom: 1rem;
   font-size: 1.1rem;
-  color: var(--text, #e4e4e7);
+  color: var(--accent, #00ffc8);
 }
-
 .related-grid {
   display: grid;
   gap: 0.75rem;
 }
-
 .related-card {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   padding: 1rem;
-  background: var(--bg-secondary, #12121a);
+  background: var(--bg, #0a0a0f);
   border: 1px solid var(--border, #27272a);
   border-radius: 8px;
   text-decoration: none;
   transition: all 0.2s ease;
 }
-
 .related-card:hover {
   border-color: var(--accent, #00ffc8);
   transform: translateX(4px);
 }
-
+.related-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
 .related-title {
   font-weight: 500;
   color: var(--text, #e4e4e7);
-  margin-bottom: 0.5rem;
-  line-height: 1.4;
+  margin-bottom: 0.25rem;
+  line-height: 1.3;
 }
-
 .related-meta {
-  font-size: 0.85rem;
-  color: var(--text-secondary, #71717a);
+  font-size: 0.8rem;
+  color: var(--text-muted, #71717a);
   display: flex;
-  gap: 1rem;
+  gap: 0.75rem;
 }
-
 @media (max-width: 768px) {
-  .related-posts {
-    padding: 1rem;
-  }
-  
-  .related-card {
-    padding: 0.75rem;
-  }
+  .related-posts { padding: 1rem; }
+  .related-card { padding: 0.75rem; }
+  .related-image { width: 50px; height: 50px; }
 }
 </style>
-{{- end }}
 {{- end }}
