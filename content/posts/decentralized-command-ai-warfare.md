@@ -3,7 +3,7 @@ title: "Why Iran's IRGC Structure Could Defeat AI Warfare: The Decentralization 
 date: 2026-03-04T12:45:00+09:00
 draft: false
 cover:
-  image: "/images/decentralized-warfare.png"
+  image: "/images/data-fortress.png"
 tags: ["AI", "Geopolitics", "Defense", "Iran", "Organizational Strategy"]
 categories: ["Investment Insights"]
 author: "Den Kim"
