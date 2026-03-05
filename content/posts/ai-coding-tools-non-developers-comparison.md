@@ -3,7 +3,7 @@ title: "AI Coding Tools for Non-Developers: Which One Should You Actually Use?"
 date: 2026-03-05T20:45:00+09:00
 draft: false
 cover:
-  image: "/images/data-fortress.png"
+  image: "/images/ai-coding-tools-comparison.png"
 tags: ["AI", "Claude", "Cursor", "Windsurf", "Copilot", "Codex", "Cowork", "Productivity"]
 categories: ["AI Workflows"]
 author: "Den Kim"

@@ -3,7 +3,7 @@ title: "Claude Code for Non-Developers: Real Workflows That Actually Save Time"
 date: 2026-03-05T09:30:00+09:00
 draft: false
 cover:
-  image: "/images/data-fortress.png"
+  image: "/images/ai-agent-economy.png"
 tags: ["AI", "Claude", "Productivity", "MCP", "No-Code"]
 categories: ["AI Workflows"]
 author: "Den Kim"
