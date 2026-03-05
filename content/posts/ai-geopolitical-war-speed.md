@@ -3,7 +3,7 @@ title: "AI and the Speed of War: Geopolitical Risk in the Algorithm Age"
 date: 2026-03-04T01:00:00+09:00
 draft: false
 cover:
-  image: "/images/ai-war-speed.png"
+  image: "/images/data-fortress.png"
 tags: ["AI", "Geopolitics", "Defense", "Investment", "Middle East", "War"]
 categories: ["Investment Insights"]
 author: "Den Kim"
