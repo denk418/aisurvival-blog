@@ -3,7 +3,7 @@ title: "February 2026: The $189B Venture Month That Changed Everything"
 date: 2026-03-07T22:35:00+09:00
 draft: false
 cover:
-  image: "/images/ai-agent-economy.png"
+  image: "/images/vertical-ai-unicorns.png"
 tags: ["AI", "Venture Capital", "Investment", "OpenAI", "Market Analysis"]
 categories: ["Investment Insights"]
 author: "Den Kim"
