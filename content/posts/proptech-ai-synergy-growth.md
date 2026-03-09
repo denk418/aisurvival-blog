@@ -3,7 +3,7 @@ title: "Why PropTech Outpaces Legacy Industries: The AI Synergy That's Creating 
 date: 2026-03-09T20:10:00+09:00
 draft: false
 cover:
-  image: "/images/vertical-ai-unicorns.png"
+  image: "/images/proptech-ai-synergy.png"
 tags: ["PropTech", "AI", "Investment", "Real Estate", "Digital Transformation"]
 categories: ["Investment Insights"]
 author: "Den Kim"
