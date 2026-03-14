@@ -249,6 +249,14 @@ Rules:
 
 ---
 
+## Related Posts
+
+- [The AI Productivity Paradox](/posts/ai-productivity-paradox-2026/) — Why 95% of AI pilots fail and what works
+- [Claude Code for Non-Developers](/posts/claude-code-non-developers-guide/) — Real workflows without coding
+- [AI Coding Tools Compared](/posts/ai-coding-tools-non-developers-comparison/) — Which tool for which job
+
+---
+
 *The question isn't whether AI agents will transform knowledge work. It's whether you'll be early to harness their potential.*
 
 *— aisurvival.blog*
