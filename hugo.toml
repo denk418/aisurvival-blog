@@ -65,13 +65,19 @@ rssLimit = 20
   [params.homeInfoParams]
     Title = "AI Survival Blog"
     Content = """Survive and thrive in the AI era through structural insights.
-    
+
+<br><br>
+
 **What you'll find here:**
+
 - 📊 Data-driven investment analysis
 - 🛠 Real AI productivity workflows
 - 🔍 Counter-intuitive insights from original research
 
+<br>
+
 **Start here:**
+
 - [Why 95% of AI Pilots Fail](/posts/ai-productivity-paradox-2026/) — MIT's findings on what works
 - [Nvidia's $4B Photonics Bet](/posts/nvidia-photonics-ai-gold-rush/) — The next AI bottleneck
 - [Notion AI Agents That Work](/posts/notion-custom-agents-real-world-cases/) — Real time savings"""
